@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>รับสมัครนักเรียน-นักศึกษา 2569 | วิทยาลัยอาชีวศึกษาปากพนัง</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    body { font-family: 'Prompt', sans-serif; }
+    .bg-pattern {
+      background-color: #f0f9ff;
+      background-image:
+        radial-gradient(at 10% 10%, rgba(56, 189, 248, 0.22) 0px, transparent 50%),
+        radial-gradient(at 90% 15%, rgba(250, 204, 21, 0.24) 0px, transparent 45%),
+        radial-gradient(at 80% 90%, rgba(14, 165, 233, 0.16) 0px, transparent 50%);
+    }
+    .radio-pill input:checked + span {
+      background: linear-gradient(135deg, #0284c7, #0ea5e9);
+      color: #ffffff;
+      border-color: #0284c7;
+      box-shadow: 0 6px 15px -4px rgba(2, 132, 199, 0.4);
+    }
+    .level-card input:checked + div {
+      border-color: #0284c7;
+      background: linear-gradient(135deg, #f0f9ff 0%, #fefce8 100%);
+      box-shadow: 0 8px 20px -6px rgba(2, 132, 199, 0.35);
+    }
+    .level-card input:checked + div .check-badge {
+      background-color: #facc15;
+      color: #0c4a6e;
+      border-color: #eab308;
+    }
+  </style>
+</head>
+<body class="bg-pattern min-h-screen py-6 px-4 sm:py-10 flex items-center justify-center text-slate-800">
+
+  <main class="w-full max-w-2xl">
+    <!-- Header Banner -->
+    <div class="relative overflow-hidden rounded-t-3xl bg-gradient-to-br from-sky-600 via-blue-600 to-sky-700 text-white px-6 py-8 sm:px-10 shadow-xl">
+      <div class="absolute -top-12 -right-12 w-44 h-44 rounded-full bg-yellow-300/20 blur-2xl"></div>
+      <div class="absolute -bottom-10 -left-10 w-36 h-36 rounded-full bg-sky-300/20 blur-2xl"></div>
+
+      <div class="relative z-10 flex flex-col sm:flex-row sm:items-center gap-4">
+        <!-- กล่องโลโก้ (เปลี่ยนเป็นรูปอัตโนมัติถ้าแอดมินตั้งค่าไว้) -->
+        <div id="siteLogoBox" class="w-16 h-16 rounded-2xl bg-yellow-400 text-sky-900 flex items-center justify-center shadow-lg shrink-0 overflow-hidden transition-all">
+          <i class="fa-solid fa-graduation-cap text-3xl"></i>
+        </div>
+        <div>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-yellow-400 text-sky-950 mb-2 shadow-sm">
+            <i class="fa-solid fa-sparkles"></i> ประจำปีการศึกษา 2569
+          </span>
+          <h1 class="text-2xl sm:text-3xl font-bold tracking-tight leading-snug">
+            ระบบรับสมัครนักเรียน-นักศึกษา
+          </h1>
+          <p class="text-sky-100 text-sm sm:text-base mt-0.5">
+            วิทยาลัยอาชีวศึกษาปากพนัง
+          </p>
+        </div>
+      </div>
+      <div class="absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r from-yellow-300 via-amber-400 to-yellow-300"></div>
+    </div>
+
+    <!-- Form Container -->
+    <div id="form-section" class="bg-white/95 backdrop-blur rounded-b-3xl shadow-xl border border-sky-100 px-6 py-7 sm:px-10 sm:py-9">
+      <form id="registerForm" class="space-y-6" novalidate>
+
+        <!-- คำนำหน้า -->
+        <div>
+          <label class="block text-sm font-semibold text-slate-700 mb-2.5">
+            <i class="fa-solid fa-user-tag text-sky-500 mr-1.5"></i>คำนำหน้า <span class="text-rose-500">*</span>
+          </label>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+            <label class="radio-pill cursor-pointer">
+              <input type="radio" name="prefix" value="เด็กชาย" class="sr-only" required>
+              <span class="block text-center py-2.5 px-3 rounded-xl border-2 border-slate-200 text-sm font-medium text-slate-600 hover:border-sky-300 transition-all">เด็กชาย</span>
+            </label>
+            <label class="radio-pill cursor-pointer">
+              <input type="radio" name="prefix" value="เด็กหญิง" class="sr-only">
+              <span class="block text-center py-2.5 px-3 rounded-xl border-2 border-slate-200 text-sm font-medium text-slate-600 hover:border-sky-300 transition-all">เด็กหญิง</span>
+            </label>
+            <label class="radio-pill cursor-pointer">
+              <input type="radio" name="prefix" value="นาย" class="sr-only">
+              <span class="block text-center py-2.5 px-3 rounded-xl border-2 border-slate-200 text-sm font-medium text-slate-600 hover:border-sky-300 transition-all">นาย</span>
+            </label>
+            <label class="radio-pill cursor-pointer">
+              <input type="radio" name="prefix" value="นางสาว" class="sr-only">
+              <span class="block text-center py-2.5 px-3 rounded-xl border-2 border-slate-200 text-sm font-medium text-slate-600 hover:border-sky-300 transition-all">นางสาว</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- ชื่อ-นามสกุล -->
+        <div>
+          <label for="fullName" class="block text-sm font-semibold text-slate-700 mb-1.5">
+            <i class="fa-solid fa-id-card text-sky-500 mr-1.5"></i>ชื่อ-นามสกุล <span class="text-rose-500">*</span>
+          </label>
+          <input type="text" id="fullName" name="fullName" placeholder="เช่น สมชาย ใจดี (ไม่ต้องใส่คำนำหน้า)" required
+            class="w-full px-4 py-3 rounded-xl border-2 border-slate-200 focus:border-sky-500 focus:ring-4 focus:ring-sky-100 outline-none transition-all text-slate-800 placeholder:text-slate-400">
+        </div>
+
+        <!-- เบอร์โทร -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div>
+            <label for="studentPhone" class="block text-sm font-semibold text-slate-700 mb-1.5">
+              <i class="fa-solid fa-mobile-screen-button text-sky-500 mr-1.5"></i>เบอร์โทรนักเรียน <span class="text-rose-500">*</span>
+            </label>
+            <input type="tel" id="studentPhone" name="studentPhone" maxlength="10" inputmode="numeric" placeholder="08XXXXXXXX" required
+              class="w-full px-4 py-3 rounded-xl border-2 border-slate-200 focus:border-sky-500 focus:ring-4 focus:ring-sky-100 outline-none transition-all text-slate-800 placeholder:text-slate-400">
+            <p class="text-xs text-slate-400 mt-1">กรอกตัวเลข 10 หลัก ไม่ต้องใส่ขีด (-)</p>
+          </div>
+
+          <div>
+            <label for="parentPhone" class="block text-sm font-semibold text-slate-700 mb-1.5">
+              <i class="fa-solid fa-phone-volume text-amber-500 mr-1.5"></i>เบอร์ติดต่อผู้ปกครอง <span class="text-rose-500">*</span>
+            </label>
+            <input type="tel" id="parentPhone" name="parentPhone" maxlength="10" inputmode="numeric" placeholder="08XXXXXXXX" required
+              class="w-full px-4 py-3 rounded-xl border-2 border-slate-200 focus:border-sky-500 focus:ring-4 focus:ring-sky-100 outline-none transition-all text-slate-800 placeholder:text-slate-400">
+            <p class="text-xs text-slate-400 mt-1">กรอกตัวเลข 10 หลัก ไม่ต้องใส่ขีด (-)</p>
+          </div>
+        </div>
+
+        <!-- มาจากโรงเรียน -->
+        <div>
+          <label for="school" class="block text-sm font-semibold text-slate-700 mb-1.5">
+            <i class="fa-solid fa-school text-sky-500 mr-1.5"></i>มาจากโรงเรียน / สถานศึกษาเดิม <span class="text-rose-500">*</span>
+          </label>
+          <input type="text" id="school" name="school" placeholder="เช่น โรงเรียนปากพนัง" required
+            class="w-full px-4 py-3 rounded-xl border-2 border-slate-200 focus:border-sky-500 focus:ring-4 focus:ring-sky-100 outline-none transition-all text-slate-800 placeholder:text-slate-400">
+        </div>
+
+        <!-- ระดับชั้นที่สมัคร -->
+        <div>
+          <label class="block text-sm font-semibold text-slate-700 mb-2.5">
+            <i class="fa-solid fa-layer-group text-amber-500 mr-1.5"></i>สมัครระดับชั้น <span class="text-rose-500">*</span>
+          </label>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+            <label class="level-card cursor-pointer">
+              <input type="radio" name="level" value="ปวช." class="sr-only" required>
+              <div class="p-4 rounded-2xl border-2 border-slate-200 hover:border-sky-300 transition-all flex items-center justify-between">
+                <div>
+                  <div class="text-lg font-bold text-sky-800">ระดับชั้น ปวช.</div>
+                  <div class="text-xs text-slate-500">ประกาศนียบัตรวิชาชีพ (จบ ม.3)</div>
+                </div>
+                <div class="check-badge w-8 h-8 rounded-full border-2 border-slate-200 flex items-center justify-center text-transparent transition-all">
+                  <i class="fa-solid fa-check text-sm"></i>
+                </div>
+              </div>
+            </label>
+
+            <label class="level-card cursor-pointer">
+              <input type="radio" name="level" value="ปวส." class="sr-only">
+              <div class="p-4 rounded-2xl border-2 border-slate-200 hover:border-sky-300 transition-all flex items-center justify-between">
+                <div>
+                  <div class="text-lg font-bold text-sky-800">ระดับชั้น ปวส.</div>
+                  <div class="text-xs text-slate-500">ประกาศนียบัตรวิชาชีพชั้นสูง (จบ ปวช./ม.6)</div>
+                </div>
+                <div class="check-badge w-8 h-8 rounded-full border-2 border-slate-200 flex items-center justify-center text-transparent transition-all">
+                  <i class="fa-solid fa-check text-sm"></i>
+                </div>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- แจ้งเตือน Error -->
+        <div id="errorAlert" class="hidden p-3.5 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 text-sm flex items-center gap-2.5">
+          <i class="fa-solid fa-circle-exclamation text-rose-500 text-lg shrink-0"></i>
+          <span id="errorText"></span>
+        </div>
+
+        <!-- ปุ่มส่งแบบฟอร์ม -->
+        <button type="submit" id="submitBtn"
+          class="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-sky-600 to-blue-600 hover:from-sky-500 hover:to-blue-500 active:scale-[0.99] text-white font-semibold text-base shadow-lg shadow-sky-500/30 transition-all flex items-center justify-center gap-2.5">
+          <i class="fa-solid fa-paper-plane"></i>
+          <span>ส่งใบสมัครเรียน</span>
+        </button>
+      </form>
+    </div>
+
+    <!-- Success Container -->
+    <div id="success-section" class="hidden bg-white/95 backdrop-blur rounded-b-3xl shadow-xl border border-sky-100 px-6 py-8 sm:px-10 text-center">
+      <div class="w-20 h-20 mx-auto rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mb-4 ring-8 ring-emerald-50">
+        <i class="fa-solid fa-check text-4xl"></i>
+      </div>
+      <h2 class="text-2xl font-bold text-slate-800">ส่งใบสมัครเรียนเรียบร้อยแล้ว!</h2>
+      <p class="text-slate-500 text-sm mt-1">เจ้าหน้าที่จะตรวจสอบข้อมูลและติดต่อกลับตามเบอร์โทรศัพท์ที่ให้ไว้</p>
+
+      <div class="mt-6 p-5 rounded-2xl bg-gradient-to-br from-sky-50 to-amber-50 border-2 border-dashed border-sky-300">
+        <div class="text-xs font-medium text-slate-500 uppercase tracking-wider">รหัสใบสมัครของคุณ</div>
+        <div id="resRegId" class="text-3xl font-bold text-sky-700 tracking-wide my-1">PPVC-001</div>
+        <div id="resSummary" class="text-sm text-slate-700 font-medium mt-2"></div>
+        <p class="text-xs text-amber-700 bg-amber-100/80 inline-block px-3 py-1 rounded-full mt-3">
+          <i class="fa-solid fa-camera mr-1"></i>กรุณาแคปหน้าจอนี้เก็บไว้เป็นหลักฐาน
+        </p>
+      </div>
+
+      <!-- ช่องทางติดตามวิทยาลัย -->
+      <div class="mt-7 pt-6 border-t border-slate-100">
+        <p class="text-sm font-semibold text-slate-700 mb-3.5">
+          ติดตามข่าวสารและประกาศผลได้ที่ช่องทางของวิทยาลัย
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <a id="linkFacebook" href="#" target="_blank" rel="noopener noreferrer"
+            class="flex items-center justify-center gap-2.5 py-3 px-4 rounded-xl bg-[#1877F2] hover:bg-[#166fe5] text-white font-medium text-sm shadow-md transition-transform hover:-translate-y-0.5">
+            <i class="fa-brands fa-facebook text-lg"></i>
+            <span>เพจวิทยาลัย</span>
+          </a>
+          <a id="linkTiktok" href="#" target="_blank" rel="noopener noreferrer"
+            class="flex items-center justify-center gap-2.5 py-3 px-4 rounded-xl bg-slate-900 hover:bg-black text-white font-medium text-sm shadow-md transition-transform hover:-translate-y-0.5">
+            <i class="fa-brands fa-tiktok text-lg"></i>
+            <span>TikTok วิทยาลัย</span>
+          </a>
+          <a id="linkInstagram" href="#" target="_blank" rel="noopener noreferrer"
+            class="flex items-center justify-center gap-2.5 py-3 px-4 rounded-xl bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] hover:opacity-95 text-white font-medium text-sm shadow-md transition-transform hover:-translate-y-0.5">
+            <i class="fa-brands fa-instagram text-lg"></i>
+            <span>Instagram</span>
+          </a>
+        </div>
+      </div>
+
+      <button type="button" onclick="resetForm()"
+        class="mt-6 text-sm font-medium text-sky-600 hover:text-sky-800 underline underline-offset-4">
+        กรอกใบสมัครใหม่อีกครั้ง
+      </button>
+    </div>
+
+    <p class="text-center text-xs text-slate-400 mt-5">
+      © 2569 วิทยาลัยอาชีวศึกษาปากพนัง
+    </p>
+  </main>
+
+  <script>
+    // =================================================================
+    // ตั้งค่าลิงก์ API และช่องทางโซเชียลมีเดียของวิทยาลัยที่นี่
+    // =================================================================
+    const CONFIG = {
+      API_URL: 'https://script.google.com/macros/s/AKfycbzOzWfI66l2x8e_G6FHzfKjFR03-7ZzgkFrq_AFcGZqTiXuvOH1fFyZkwRX3X-KpjVQ/exec',
+      FACEBOOK_URL: 'https://www.facebook.com/',
+      TIKTOK_URL: 'https://www.tiktok.com/',
+      INSTAGRAM_URL: 'https://www.instagram.com/'
+    };
+
+    document.getElementById('linkFacebook').href = CONFIG.FACEBOOK_URL;
+    document.getElementById('linkTiktok').href = CONFIG.TIKTOK_URL;
+    document.getElementById('linkInstagram').href = CONFIG.INSTAGRAM_URL;
+
+    // ฟังก์ชันแสดงโลโก้ Base64 (หรือกลับเป็นไอคอนหมวกถ้ายังไม่ได้ตั้งค่า)
+    function applySiteLogo(base64Str) {
+      const box = document.getElementById('siteLogoBox');
+      if (base64Str && base64Str.startsWith('data:image/')) {
+        box.className = 'w-16 h-16 rounded-2xl bg-white p-1.5 flex items-center justify-center shadow-lg shrink-0 overflow-hidden transition-all';
+        box.innerHTML = `<img src="${base64Str}" alt="โลโก้วิทยาลัย" class="w-full h-full object-contain">`;
+      } else {
+        box.className = 'w-16 h-16 rounded-2xl bg-yellow-400 text-sky-900 flex items-center justify-center shadow-lg shrink-0 overflow-hidden transition-all';
+        box.innerHTML = '<i class="fa-solid fa-graduation-cap text-3xl"></i>';
+      }
+    }
+
+    // โหลดโลโก้จากแคชก่อนเพื่อให้แสดงทันที แล้วอัปเดตล่าสุดจาก Google Sheets
+    async function loadSiteLogo() {
+      const cached = localStorage.getItem('ppvc_logo_base64');
+      if (cached) applySiteLogo(cached);
+
+      try {
+        const res = await fetch(CONFIG.API_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify({ action: 'getSettings' })
+        });
+        const result = await res.json();
+        if (result.status === 'success') {
+          const logo = result.logoBase64 || '';
+          if (logo) {
+            localStorage.setItem('ppvc_logo_base64', logo);
+          } else {
+            localStorage.removeItem('ppvc_logo_base64');
+          }
+          applySiteLogo(logo);
+        }
+      } catch (e) {
+        // กรณีโหลดไม่สำเร็จ ให้แสดงโลโก้แคชหรือไอคอนเริ่มต้นต่อได้ตามปกติ
+      }
+    }
+    loadSiteLogo();
+
+    // กรองช่องเบอร์โทรให้พิมพ์ได้เฉพาะตัวเลข
+    ['studentPhone', 'parentPhone'].forEach(id => {
+      document.getElementById(id).addEventListener('input', function () {
+        this.value = this.value.replace(/\D/g, '').slice(0, 10);
+      });
+    });
+
+    const form = document.getElementById('registerForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const errorAlert = document.getElementById('errorAlert');
+    const errorText = document.getElementById('errorText');
+
+    function showError(msg) {
+      errorText.textContent = msg;
+      errorAlert.classList.remove('hidden');
+      errorAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function hideError() {
+      errorAlert.classList.add('hidden');
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      hideError();
+
+      const prefixEl = document.querySelector('input[name="prefix"]:checked');
+      const levelEl = document.querySelector('input[name="level"]:checked');
+      const fullName = document.getElementById('fullName').value.trim();
+      const studentPhone = document.getElementById('studentPhone').value.trim();
+      const school = document.getElementById('school').value.trim();
+      const parentPhone = document.getElementById('parentPhone').value.trim();
+
+      if (!prefixEl) return showError('กรุณาเลือกคำนำหน้า');
+      if (!fullName) return showError('กรุณากรอกชื่อ-นามสกุล');
+      if (!/^0\d{9}$/.test(studentPhone)) return showError('กรุณากรอกเบอร์โทรนักเรียนให้ครบ 10 หลัก (ขึ้นต้นด้วย 0)');
+      if (!/^0\d{9}$/.test(parentPhone)) return showError('กรุณากรอกเบอร์ติดต่อผู้ปกครองให้ครบ 10 หลัก (ขึ้นต้นด้วย 0)');
+      if (!school) return showError('กรุณากรอกชื่อโรงเรียนหรือสถานศึกษาเดิม');
+      if (!levelEl) return showError('กรุณาเลือกระดับชั้นที่ต้องการสมัคร (ปวช. หรือ ปวส.)');
+
+      submitBtn.disabled = true;
+      submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+      submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> <span>กำลังบันทึกข้อมูล...</span>';
+
+      try {
+        const response = await fetch(CONFIG.API_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify({
+            action: 'register',
+            data: {
+              prefix: prefixEl.value, fullName, studentPhone, school, parentPhone, level: levelEl.value
+            }
+          })
+        });
+
+        const result = await response.json();
+
+        if (result.status === 'success') {
+          document.getElementById('resRegId').textContent = result.regId;
+          document.getElementById('resSummary').textContent =
+            `${prefixEl.value}${fullName} | ระดับชั้น ${levelEl.value}`;
+          document.getElementById('form-section').classList.add('hidden');
+          document.getElementById('success-section').classList.remove('hidden');
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+          showError(result.message || 'ไม่สามารถบันทึกข้อมูลได้ กรุณาลองใหม่อีกครั้ง');
+        }
+      } catch (err) {
+        showError('เกิดข้อผิดพลาดในการเชื่อมต่อระบบ กรุณาตรวจสอบอินเทอร์เน็ตแล้วลองใหม่');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+        submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> <span>ส่งใบสมัครเรียน</span>';
+      }
+    });
+
+    function resetForm() {
+      form.reset();
+      hideError();
+      document.getElementById('success-section').classList.add('hidden');
+      document.getElementById('form-section').classList.remove('hidden');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
